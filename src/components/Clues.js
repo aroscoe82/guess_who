@@ -45,7 +45,7 @@ export default class Clues extends React.Component{
         {
           this.state.clues.map((clue, index) => {
             if(clue.id <= this.state.count){
-              return <p className="clue" key={clue.id}>{clue.label}: {clue.answer}</p>
+              return <p className="clue" key={clue.id}>{clue.label}: {clue.answer ? clue.answer : 'unknown'}</p>
             }
           })
         }

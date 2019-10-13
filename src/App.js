@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ErrorBoundary>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             {routes.map((route, index) => {
               return (
