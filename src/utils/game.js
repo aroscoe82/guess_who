@@ -18,9 +18,7 @@ export class game{
         clues: [ 'house', 'bloodStatus', 'orderOfThePhoenix'],
         randomCharacter: () => {
           let studentCharacters = this.getStudentCharacters();
-          let i = Math.floor(Math.random() * studentCharacters.length);
-          console.log('i: ', i)
-          return studentCharacters[i]
+          return studentCharacters[Math.floor(Math.random() * studentCharacters.length)]
         }
       },
       'auror': {
@@ -46,5 +44,25 @@ export class game{
 
   setCharacters(characters){
     this.characterList = characters;
+  }
+
+  getAllCharacters(){
+    return this.characterList;
+  }
+
+  getStudentCharacters(){
+    return this.characterList.filter(character => (
+      character.role === 'student'
+    ));
+  }
+
+  getMainCharacters(){
+    let mainCharacters = [
+      'Harry Potter', 'Ronald Weasley', 'Hermione Granger', 'Neville Longbottom', 'Luna Lovegood'
+    ];
+
+    return this.characterList.filter((character) => {
+      return mainCharacters.includes(character.name);
+    });
   }
 }

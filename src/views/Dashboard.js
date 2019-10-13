@@ -32,14 +32,14 @@ export default class Dashboard extends React.Component{
   }
 
   componentDidMount(){
-    // axios.get('https://www.potterapi.com/v1/characters/')
-    //   .then((response) => {
-    //   this.game.setCharacters(response.data);
-      this.setState({loading: false})
-    //   })
-    //   .catch((error) => {
-    //     // need to handle error
-    //   });
+    axios.get('https://www.potterapi.com/v1/characters/')
+      .then((response) => {
+        this.game.setCharacters(response.data);
+        this.setState({loading: false})
+      })
+      .catch((error) => {
+        // need to handle error
+      });
   }
 
   render(){
