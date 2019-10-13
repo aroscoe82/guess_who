@@ -8,3 +8,15 @@ it('renders without crashing', () => {
   ReactDOM.render(<Levels />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+describe('method', () => {
+  it('notify parent of level selection', () => {
+
+  });
+});
+
+describe('render', () => {
+  it('should render a list of buttons for level options', () => {
+
+  });
+});
