@@ -4,13 +4,13 @@ import Gameboard from '../views/Gameboard';
 
 export default[
   {
-    path: '/',
+    path: process.env.PUBLIC_URL + '/',
     exact: true,
     name: 'Dashboard',
     component: Dashboard
   },
   {
-    path: '/level/:code',
+    path: process.env.PUBLIC_URL + '/level/:code',
     exact: true,
     name: 'Game',
     component: Gameboard
