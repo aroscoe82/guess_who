@@ -1,0 +1,106 @@
+@import 'reset';
+@import 'variables';
+
+@import 'mixins';
+@import 'spacing';
+@import 'type';
+@import 'buttons';
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: $black;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.App {
+  flex: 1 1 100%;
+}
+
+.dashboard{
+  background: url('https://hpmedia.bloomsbury.com/rep/g/page-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  height: 100%;
+
+  .level-options {
+    .level-option{
+      display: block;
+      font-size: 2rem;
+      margin: .5rem auto;
+      max-width: 90%;
+      width: 40%;
+    }
+  }
+}
+
+.gameboard{
+  background: url('https://kids.scholastic.com/content/dam/scholastic/kids/Content-Mod-BGs/harry-potter/hp-cursed-child-bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .back-btn {
+      @extend .btn-default;
+      flex-grow: 0;
+    }
+
+    .timer {
+      color: $white;
+      flex: 1;
+
+      span {
+        background-color: rgba(0,0,0, .8);
+        border-radius: .5rem;
+        padding: .5rem;}
+    }
+  }
+
+  .entry {
+    flex: 0;
+    width: 100%;
+
+    .guessAnswer {
+      background-color: $black;
+      border: 2px solid $default;
+      color: $white;
+      font-size: 1.25rem;
+      padding: .25rem;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .game{
+    flex: 1;
+
+    .clues{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
+    }
+
+    .clue {
+      background-color: rgba(245, 197, 67, 0.8); padding: .5rem; border-radius: .5rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+} 
