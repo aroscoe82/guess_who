@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import './scss/App.scss';
 
 function Lost(){
-  return <p>You Seem Lost...</p>
+  return <h1 className="text-center color-white py-5">You Seem Lost...</h1>
 }
 
 class App extends React.Component {
