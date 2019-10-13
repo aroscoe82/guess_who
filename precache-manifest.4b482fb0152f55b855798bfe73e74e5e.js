@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f6a794cee6733e9b8c8aebbeaf8bb3b",
+    "revision": "eca5380aa093bd0f9b34971513b9075f",
     "url": "/guess_who/index.html"
   },
   {
-    "revision": "8d004e9f407c3bef8f88",
+    "revision": "594d979e48aee429326c",
     "url": "/guess_who/static/css/main.9ef37534.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/guess_who/static/js/2.fb0b7269.chunk.js"
   },
   {
-    "revision": "8d004e9f407c3bef8f88",
-    "url": "/guess_who/static/js/main.cc0c2089.chunk.js"
+    "revision": "594d979e48aee429326c",
+    "url": "/guess_who/static/js/main.f4c7c716.chunk.js"
   },
   {
     "revision": "2dc0db4bddce1fe61ff5",

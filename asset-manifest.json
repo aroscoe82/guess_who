@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/guess_who/static/css/main.9ef37534.chunk.css",
-    "main.js": "/guess_who/static/js/main.cc0c2089.chunk.js",
-    "main.js.map": "/guess_who/static/js/main.cc0c2089.chunk.js.map",
+    "main.js": "/guess_who/static/js/main.f4c7c716.chunk.js",
+    "main.js.map": "/guess_who/static/js/main.f4c7c716.chunk.js.map",
     "runtime-main.js": "/guess_who/static/js/runtime-main.d1158255.js",
     "runtime-main.js.map": "/guess_who/static/js/runtime-main.d1158255.js.map",
     "static/js/2.fb0b7269.chunk.js": "/guess_who/static/js/2.fb0b7269.chunk.js",
     "static/js/2.fb0b7269.chunk.js.map": "/guess_who/static/js/2.fb0b7269.chunk.js.map",
     "index.html": "/guess_who/index.html",
-    "precache-manifest.be7914971c556203cf712609e5e1d475.js": "/guess_who/precache-manifest.be7914971c556203cf712609e5e1d475.js",
+    "precache-manifest.4b482fb0152f55b855798bfe73e74e5e.js": "/guess_who/precache-manifest.4b482fb0152f55b855798bfe73e74e5e.js",
     "service-worker.js": "/guess_who/service-worker.js",
     "static/css/main.9ef37534.chunk.css.map": "/guess_who/static/css/main.9ef37534.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d1158255.js",
     "static/js/2.fb0b7269.chunk.js",
     "static/css/main.9ef37534.chunk.css",
-    "static/js/main.cc0c2089.chunk.js"
+    "static/js/main.f4c7c716.chunk.js"
   ]
 }
