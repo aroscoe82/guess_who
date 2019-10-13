@@ -29,14 +29,14 @@ describe('state', () =>  {
     Dashboard.prototype.componentDidMount = () => { };
     wrapper = shallow (<Dashboard history={mockHistory} />);
     instance = wrapper.instance();
-  
+
     expect(instance.state.loading).toBeTruthy();
   });
 });
 
 describe('method', () => {
     beforeEach(() => {
-    
+
     Dashboard.prototype.componentDidMount = () => { };
 
     wrapper = shallow (<Dashboard history={mockHistory} />);
@@ -78,7 +78,7 @@ describe('componentDidMount', () => {
 
     wrapper = shallow (<Dashboard history={mockHistory} />);
     instance = wrapper.instance();
-  
+
     jest.spyOn(axios, 'get');
     jest.spyOn(instance, 'componentDidMount');
   });

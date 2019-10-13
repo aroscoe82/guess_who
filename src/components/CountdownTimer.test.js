@@ -55,4 +55,4 @@ describe('render', () => {
     instance.setState({secondsRemaining: 10});
     expect(wrapper.contains(<span>Time Remaining: 10</span>)).toBeTruthy();
   });
-});
+}); 

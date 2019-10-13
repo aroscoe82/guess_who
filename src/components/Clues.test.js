@@ -47,7 +47,7 @@ describe('tick', () => {
 
     expect(instance.state.count).toEqual(0);
     instance.tick();
-    
+
     expect(instance.state.count).toEqual(1);
   });
 });
@@ -79,4 +79,4 @@ describe('componentDidMount', () => {
       clueInterval: 30
     });
   });
-});
+}); 

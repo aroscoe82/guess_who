@@ -42,7 +42,7 @@ export default class Gameboard extends React.Component{
             <Clues time={gameInfo.time} clues={gameInfo.clues} who={gameInfo.guessWho} /> 
           </div>
           <div className="entry p-3 text-center">
-            <input className="guessAnswer" type="text" name="guessAnswer" placeholder="Guess" onChange={this.guess}/>
+            <input className="guessAnswer" type="text" name="guessAnswer" placeholder="Guess" onChange={this.guessHandler}/>
           </div>
         </div>
       )
@@ -56,7 +56,6 @@ export default class Gameboard extends React.Component{
           </div>
           <div className="game p-3 text-center">
             <h1 className="mb-5 color-white">{this.state.gameOver}</h1>
-            <h3>it was {this.state.gameInfo.guessWho.name}</h3>
             <Link className="btn-default btn-lg" to={'/'}>Play Again</Link>
           </div>
         </div>
@@ -67,4 +66,4 @@ export default class Gameboard extends React.Component{
       <div className="gameboard"><h1 class="text-center color-white py-5">Loading...</h1></div>
     )
   }
-}
+} 

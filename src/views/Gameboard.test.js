@@ -20,7 +20,7 @@ describe('guessHandler', () => {
   it('should be defined', () => {
     expect(instance.guessHandler).toBeDefined();
   })
-  
+
   it('should take entry event and check if match game character, if correct end game', () => {
     let mockEvent = {
       preventDefault: jest.fn(),
@@ -89,4 +89,4 @@ describe('render', () => {
 
     expect(wrapper.contains('Loading...')).toBeTruthy();
   });
-});
+}); 

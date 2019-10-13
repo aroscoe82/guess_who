@@ -64,7 +64,7 @@ html, body {
     .timer {
       color: $white;
       flex: 1;
-      
+
       span {
         background-color: rgba(0,0,0, .8);
         border-radius: .5rem;
@@ -89,7 +89,7 @@ html, body {
 
   .game{
     flex: 1;
-    
+
     .clues{
       display: flex;
       flex-direction: column;
@@ -103,4 +103,4 @@ html, body {
       text-transform: uppercase;
     }
   }
-}
+} 

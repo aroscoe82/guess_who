@@ -52,4 +52,4 @@ export default class Clues extends React.Component{
       </ul>
     )
   }
-}
+} 
