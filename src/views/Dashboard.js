@@ -55,7 +55,7 @@ export default class Dashboard extends React.Component{
     }else{
       return (
         <div className="dashboard">
-          <h1>Loading...</h1>
+          <h1 className="text-center py-5 color-white">Loading...</h1>
         </div>
       )
     }

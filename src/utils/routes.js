@@ -7,12 +7,14 @@ export default[
     path: '/',
     exact: true,
     name: 'Dashboard',
+    class: 'dashboard',
     component: Dashboard
   },
   {
     path: '/level/:code',
     exact: true,
     name: 'Game',
+    class: 'gameboard',
     component: Gameboard
   }
 ]

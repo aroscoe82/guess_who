@@ -30,15 +30,16 @@ export default class Gameboard extends React.Component{
 
   render(){
     if(this.state.gameInfo && !this.state.gameOver){
+      let gameInfo = this.state.gameInfo; 
 
       return (
         <div className="gameboard">
           <div className="header p-3">
             <Link className="back-btn" to={'/'}>Quit</Link>
-            <span className="timer text-right"><CountdownTimer /></span>
+            <span className="timer text-right"><CountdownTimer gameOver={this.gameOver} time={gameInfo.time}/></span>
           </div>
           <div className="game p-3 text-center">
-            <Clues /> 
+            <Clues time={gameInfo.time} clues={gameInfo.clues} who={gameInfo.guessWho} /> 
           </div>
           <div className="entry p-3 text-center">
             <input className="guessAnswer" type="text" name="guessAnswer" placeholder="Guess" onChange={this.guess}/>
@@ -54,7 +55,7 @@ export default class Gameboard extends React.Component{
             <Link className="back-btn" to={'/'}>Back</Link>
           </div>
           <div className="game p-3 text-center">
-            <h1 className="mb-5">Game is Over</h1>
+            <h1 className="mb-5 color-white">{this.state.gameOver}</h1>
             <Link className="btn-default btn-lg" to={'/'}>Play Again</Link>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default class Gameboard extends React.Component{
     }
 
     return (
-      <div className="gameboard"><p>Loading...</p></div>
+      <div className="gameboard"><h1 class="text-center color-white py-5">Loading...</h1></div>
     )
   }
 }

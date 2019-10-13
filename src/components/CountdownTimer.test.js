@@ -1,58 +1,58 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from '../enzymeSetup';
 
 import CountdownTimer from './CountdownTimer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<CountdownTimer />, div);
-  ReactDOM.unmountComponentAtNode(div);
+let wrapper;
+let instance;
+
+const mockProps = {
+  gameOver: jest.fn(),
+  time: 60
+}
+
+beforeEach(() => {
+  wrapper = shallow (<CountdownTimer gameOver={mockProps.gameOver} time={mockProps.time} />);
+  instance = wrapper.instance();
 });
 
 describe('tick', () => {
-  it('if time remains decrement by 1 second', () => {
-
+  it('it should be defined', () => {
+    expect(instance.tick).toBeDefined();
   });
 
-  it('if time remains check to see if next clue should be shown', () => {
-
+  it('if time remains decrement by 1 second', () => {
+    instance.setState({secondsRemaining: 10});
+    instance.tick();
+    expect(instance.state.secondsRemaining).toEqual(9);
   });
 
   it('if time does NOT remain - cancel timer', () => {
-
+    instance.setState({secondsRemaining: 0});
+    instance.tick();
+    expect(mockProps.gameOver).toHaveBeenCalled();
   });
 });
 
 describe('componentDidMount', () => {
-  it('should determine time interval for clue reveal', () => {
-
+  it('set secondsRemaining on state', () => {
+    expect(instance.state.secondsRemaining).toEqual(60);
   });
 
-  it('should call method to get clue list', () => {
-
-  });
-
-  it('it should update state and set interval', () => {
-
+  it('it should set timer on interval', () => {
+    expect(instance.timer).toBeDefined();
   });
 });
 
-describe('componentWillUnMount', () => {
-  it('should cancel interval', () => {
+// describe('componentWillUnMount', () => {
+//   it('should cancel interval', () => {
 
-  });
-});
+//   });
+// });
 
 describe('render', () => {
-  it('should render a list of clues', () => {
-
-  });
-
-  it('on initial should have 1 clue', () => {
-
-  });
-
-  it('on interval should show another clue', () => {
-
+  it('should render time remaining message', () => {
+    instance.setState({secondsRemaining: 10});
+    expect(wrapper.contains(<span>Time Remaining: 10</span>)).toBeTruthy();
   });
 });
