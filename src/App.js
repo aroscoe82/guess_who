@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, HashRouter } from "react-router-dom";
 import routes from "./utils/routes";
 
 import ErrorBoundary from './components/ErrorBoundary';
@@ -27,6 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ErrorBoundary>
+        <HashRouter basename='/'>
         <Router>
           <Switch>
             {routes.map((route, index) => {
@@ -42,6 +43,7 @@ class App extends React.Component {
             <Route component={Lost} />
           </Switch>
         </Router>
+        </HashRouter>
         </ErrorBoundary>
       </div>
     );
