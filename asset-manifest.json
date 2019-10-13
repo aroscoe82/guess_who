@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/aroscoe82/guess_who/static/css/main.9ef37534.chunk.css",
-    "main.js": "/aroscoe82/guess_who/static/js/main.2a8e292a.chunk.js",
-    "main.js.map": "/aroscoe82/guess_who/static/js/main.2a8e292a.chunk.js.map",
-    "runtime-main.js": "/aroscoe82/guess_who/static/js/runtime-main.0d822561.js",
-    "runtime-main.js.map": "/aroscoe82/guess_who/static/js/runtime-main.0d822561.js.map",
-    "static/js/2.fb0b7269.chunk.js": "/aroscoe82/guess_who/static/js/2.fb0b7269.chunk.js",
-    "static/js/2.fb0b7269.chunk.js.map": "/aroscoe82/guess_who/static/js/2.fb0b7269.chunk.js.map",
-    "index.html": "/aroscoe82/guess_who/index.html",
-    "precache-manifest.41ba346e0f094dba8af09c5306f3b8aa.js": "/aroscoe82/guess_who/precache-manifest.41ba346e0f094dba8af09c5306f3b8aa.js",
-    "service-worker.js": "/aroscoe82/guess_who/service-worker.js",
-    "static/css/main.9ef37534.chunk.css.map": "/aroscoe82/guess_who/static/css/main.9ef37534.chunk.css.map"
+    "main.css": "/guess_who/static/css/main.9ef37534.chunk.css",
+    "main.js": "/guess_who/static/js/main.bd418ded.chunk.js",
+    "main.js.map": "/guess_who/static/js/main.bd418ded.chunk.js.map",
+    "runtime-main.js": "/guess_who/static/js/runtime-main.d1158255.js",
+    "runtime-main.js.map": "/guess_who/static/js/runtime-main.d1158255.js.map",
+    "static/js/2.fb0b7269.chunk.js": "/guess_who/static/js/2.fb0b7269.chunk.js",
+    "static/js/2.fb0b7269.chunk.js.map": "/guess_who/static/js/2.fb0b7269.chunk.js.map",
+    "index.html": "/guess_who/index.html",
+    "precache-manifest.5c6bc13f13f6c590fee69408b1e40355.js": "/guess_who/precache-manifest.5c6bc13f13f6c590fee69408b1e40355.js",
+    "service-worker.js": "/guess_who/service-worker.js",
+    "static/css/main.9ef37534.chunk.css.map": "/guess_who/static/css/main.9ef37534.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d822561.js",
+    "static/js/runtime-main.d1158255.js",
     "static/js/2.fb0b7269.chunk.js",
     "static/css/main.9ef37534.chunk.css",
-    "static/js/main.2a8e292a.chunk.js"
+    "static/js/main.bd418ded.chunk.js"
   ]
 }
