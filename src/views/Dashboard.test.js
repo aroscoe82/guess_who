@@ -117,7 +117,7 @@ describe('render', () => {
     instance = wrapper.instance();
     instance.setState({loading: false})
 
-    expect(wrapper.contains(<Levels />)).toBeTruthy()
+    expect(wrapper.find(<Levels />)).toBeTruthy()
   });
 
   it('if loading - should render loading indicator', () => {

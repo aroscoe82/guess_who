@@ -1,2 +1,29 @@
 @import 'reset';
 @import 'variables';
+
+@import 'mixins';
+@import 'spacing';
+@import 'type';
+@import 'buttons';
+
+* { box-sizing: border-box; }
+
+.dashboard{
+  background: url('https://hpmedia.bloomsbury.com/rep/g/page-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+
+  height: 100vh;
+
+  .level-options {
+    .level-option{
+      display: block;
+      margin: .5rem auto;
+      width: 40%;
+      max-width: 90%;
+
+      font-size: 2rem;
+    }
+  }
+}

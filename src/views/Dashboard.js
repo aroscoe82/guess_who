@@ -48,8 +48,8 @@ export default class Dashboard extends React.Component{
 
       return (
         <div className="dashboard">
-          <h1>Select A Level</h1>
-          <Levels setLevel={this.setLevel} gameLevels={levels} />
+          <h1 className="text-center color-white py-5">Select A Level</h1>
+          <Levels setLevel={this.setGameLevel} gameLevels={levels} />
         </div>
       )  
     }else{
