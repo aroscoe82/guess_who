@@ -2,7 +2,7 @@
 import Dashboard from '../views/Dashboard';
 import Gameboard from '../views/Gameboard';
 
-export default routes = [
+export default[
   {
     path: '/',
     exact: true,
@@ -13,6 +13,6 @@ export default routes = [
     path: '/level/:code',
     exact: true,
     name: 'Game',
-    component: GameBoard
+    component: Gameboard
   }
 ]
