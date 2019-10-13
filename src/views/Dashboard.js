@@ -1,7 +1,63 @@
 import React from 'react';
+import axios from 'axios';
+import { game } from '../utils/game';
+
+import Levels from '../components/Levels';
 
 export default class Dashboard extends React.Component{
+  constructor(props){
+    super(props);
+    this.game = new game();
+
+    this.state = {
+      loading: true
+    };
+  }
+
+  setGameLevel = (level) => {
+    const levelDetail = this.game.getLevelDetail(level);
+    const gameCharacter =  levelDetail.randomCharacter();
+
+    const gameLevel = {
+      label: levelDetail.label,
+      time: levelDetail.time,
+      clues: levelDetail.clues,
+      guessWho: gameCharacter
+    }
+
+    this.props.history.push({
+      pathname: '/level/' + levelDetail.code,
+      state: { level: gameLevel}
+    });
+  }
+
+  componentDidMount(){
+    // axios.get('https://www.potterapi.com/v1/characters/')
+    //   .then((response) => {
+    //   this.game.setCharacters(response.data);
+      this.setState({loading: false})
+    //   })
+    //   .catch((error) => {
+    //     // need to handle error
+    //   });
+  }
+
   render(){
-    return <p>Dashboard</p>
+    if(!this.state.loading){  
+      const levels = this.game.getLevels();
+
+      return (
+        <div className="dashboard">
+          <h1>Select A Level</h1>
+          <Levels setLevel={this.setLevel} gameLevels={levels} />
+        </div>
+      )  
+    }else{
+      return (
+        <div className="dashboard">
+          <h1>Loading...</h1>
+        </div>
+      )
+    }
   }
 }
